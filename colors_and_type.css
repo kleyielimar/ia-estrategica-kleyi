@@ -1,0 +1,134 @@
+/* ============================================================
+   KLEYI ELIMAR — Colors & Type tokens
+   Coach Profesional · Consultora y Mentora de Negocios
+   Fonts: Anton (display) + Montserrat (body) — Google Fonts
+          StyleScript (signature/accent) — self-hosted
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+
+@font-face {
+  font-family: 'StyleScript';
+  src: url('fonts/StyleScript-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---- Brand palette · Colores Principales ---- */
+  --ke-green-deep:   #45625D;  /* primary dark forest green — text, headings, logo K */
+  --ke-teal:         #6AA5A9;  /* primary teal — logo ELIMAR, accents */
+  --ke-aqua:         #A3D2D5;  /* light aqua — soft fills, highlights */
+
+  /* ---- Brand palette · Colores Secundarios ---- */
+  --ke-teal-deep:    #3C8081;  /* deep teal — secondary accent, links */
+  --ke-green:        #3F7856;  /* botanical green — secondary */
+  --ke-green-light:  #7EC384;  /* fresh light green — variation accent, success */
+
+  /* ---- Derived neutrals & surfaces (from brand greens) ---- */
+  --ke-ink:          #16201E;  /* near-black green — logo negativo, max contrast */
+  --ke-ink-soft:     #2C3D39;  /* softened ink for long body copy */
+  --ke-bg:           #FFFFFF;  /* base page */
+  --ke-bg-tint:      #E6F1EE;  /* signature pale mint — section backgrounds */
+  --ke-bg-tint-2:    #F4F9F7;  /* faintest mint — cards on tint */
+  --ke-surface:      #FFFFFF;  /* card surface */
+  --ke-border:       #D2E2DD;  /* hairline on tint */
+  --ke-border-strong:#B7CDC7;
+
+  /* ---- Text roles ---- */
+  --ke-fg1: var(--ke-green-deep);  /* primary text / headings */
+  --ke-fg2: #5C726D;               /* secondary / body on light */
+  --ke-fg3: #7A8F8A;               /* tertiary / supporting */
+  --ke-fg-muted: #8FA39E;          /* muted captions */
+  --ke-fg-on-dark: #EAF3F0;        /* text on green */
+  --ke-fg-on-dark-soft: #B9CFC9;
+
+  /* ---- Type families ---- */
+  --ke-font-display: 'Anton', 'Arial Narrow', sans-serif;   /* condensed heavy headlines */
+  --ke-font-body:    'Montserrat', system-ui, sans-serif;   /* everything else */
+  --ke-font-script:  'StyleScript', 'Segoe Script', cursive;/* signature / accent flourishes */
+
+  /* ---- Type scale (rem-based, 1rem = 16px) ---- */
+  --ke-text-xs:   0.75rem;   /* 12 — legal, micro labels */
+  --ke-text-sm:   0.875rem;  /* 14 — captions, meta */
+  --ke-text-base: 1rem;      /* 16 — body */
+  --ke-text-lg:   1.125rem;  /* 18 — lead body */
+  --ke-text-xl:   1.375rem;  /* 22 — small headings (Montserrat) */
+  --ke-text-2xl:  1.875rem;  /* 30 */
+  --ke-text-3xl:  2.5rem;    /* 40 */
+  --ke-text-4xl:  3.5rem;    /* 56 — display (Anton) */
+  --ke-text-5xl:  5rem;      /* 80 — hero display (Anton) */
+  --ke-text-6xl:  7rem;      /* 112 — oversized display */
+
+  /* ---- Weights (Montserrat) ---- */
+  --ke-w-light: 300;
+  --ke-w-regular: 400;
+  --ke-w-medium: 500;
+  --ke-w-semibold: 600;
+  --ke-w-bold: 700;
+  --ke-w-extrabold: 800;
+
+  /* ---- Line heights ---- */
+  --ke-lh-tight: 0.95;   /* Anton display */
+  --ke-lh-snug: 1.15;
+  --ke-lh-normal: 1.5;
+  --ke-lh-relaxed: 1.65; /* body paragraphs */
+
+  /* ---- Letter spacing ---- */
+  --ke-ls-display: 0.005em;
+  --ke-ls-eyebrow: 0.18em;  /* uppercase eyebrows / nav */
+  --ke-ls-caps: 0.06em;
+
+  /* ---- Radii ---- */
+  --ke-r-sm: 8px;
+  --ke-r-md: 14px;
+  --ke-r-lg: 22px;
+  --ke-r-xl: 32px;
+  --ke-r-pill: 999px;
+
+  /* ---- Shadows (cool green-tinted, soft) ---- */
+  --ke-shadow-sm: 0 1px 2px rgba(22,32,30,0.06), 0 1px 3px rgba(22,32,30,0.05);
+  --ke-shadow-md: 0 6px 18px rgba(22,32,30,0.08);
+  --ke-shadow-lg: 0 18px 44px rgba(22,32,30,0.12);
+  --ke-shadow-teal: 0 12px 30px rgba(60,128,129,0.22);
+
+  /* ---- Spacing scale (4px base) ---- */
+  --ke-sp-1: 4px;
+  --ke-sp-2: 8px;
+  --ke-sp-3: 12px;
+  --ke-sp-4: 16px;
+  --ke-sp-5: 24px;
+  --ke-sp-6: 32px;
+  --ke-sp-7: 48px;
+  --ke-sp-8: 64px;
+  --ke-sp-9: 96px;
+  --ke-sp-10: 128px;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES — opt in by wrapping in .ke-type
+   ============================================================ */
+.ke-type { font-family: var(--ke-font-body); color: var(--ke-fg1); }
+
+.ke-display, .ke-h1, .ke-h2, .ke-h3 { font-family: var(--ke-font-display); font-weight: 400; line-height: var(--ke-lh-tight); letter-spacing: var(--ke-ls-display); color: var(--ke-green-deep); text-transform: none; }
+
+.ke-display { font-size: clamp(3rem, 7vw, var(--ke-text-6xl)); }
+.ke-h1 { font-size: clamp(2.5rem, 5.5vw, var(--ke-text-5xl)); }
+.ke-h2 { font-size: clamp(2rem, 4vw, var(--ke-text-4xl)); }
+.ke-h3 { font-size: var(--ke-text-3xl); }
+
+/* Montserrat sub-headings */
+.ke-h4 { font-family: var(--ke-font-body); font-weight: var(--ke-w-bold); font-size: var(--ke-text-xl); line-height: var(--ke-lh-snug); color: var(--ke-green-deep); }
+
+.ke-eyebrow { font-family: var(--ke-font-body); font-weight: var(--ke-w-semibold); font-size: var(--ke-text-sm); letter-spacing: var(--ke-ls-eyebrow); text-transform: uppercase; color: var(--ke-teal-deep); }
+
+.ke-lead { font-family: var(--ke-font-body); font-weight: var(--ke-w-regular); font-size: var(--ke-text-lg); line-height: var(--ke-lh-relaxed); color: var(--ke-fg2); }
+
+.ke-body { font-family: var(--ke-font-body); font-weight: var(--ke-w-regular); font-size: var(--ke-text-base); line-height: var(--ke-lh-relaxed); color: var(--ke-fg2); }
+
+.ke-caption { font-family: var(--ke-font-body); font-weight: var(--ke-w-medium); font-size: var(--ke-text-sm); color: var(--ke-fg-muted); }
+
+.ke-quote { font-family: var(--ke-font-body); font-weight: var(--ke-w-medium); font-style: italic; font-size: var(--ke-text-2xl); line-height: var(--ke-lh-snug); color: var(--ke-green-deep); }
+
+.ke-script { font-family: var(--ke-font-script); font-weight: 400; color: var(--ke-teal-deep); line-height: 1.05; }

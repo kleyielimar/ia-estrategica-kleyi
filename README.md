@@ -1,17 +1,20 @@
 # IA Estratégica para Emprendedores — Landing
 
-Landing del taller/curso **IA Estratégica para Emprendedores** de Kleyi Elimar
+Landing de venta del curso **IA Estratégica para Emprendedores** de Kleyi Elimar
 (Administradora de Empresa).
 
-Sitio **estático** (un solo `index.html` autocontenido — estilos e imágenes
-embebidos, sin dependencias externas). Cero build.
+Sitio **estático**. CTA de compra → checkout en Systeme.io (`/curso-ia-estrategica`).
+
+## Estructura
+
+- `index.html` — la landing.
+- `colors_and_type.css`, `page.css` — estilos.
+- `assets/` — logos e íconos (SVG).
+- `assets/course/` — fotos del curso (JPG).
+- `vercel.json` — config de Vercel.
 
 ## Deploy
 
 Conectado a **Vercel** con **auto-deploy desde GitHub**:
 - Push a `main` → producción.
-- Cualquier otra rama / Pull Request → **deploy de vista previa** con su propio link.
-
-## Editar
-
-Todo el contenido vive en `index.html`, en secciones `<section>` editables a mano.
+- Rama / Pull Request → **deploy de vista previa** con su propio link.
